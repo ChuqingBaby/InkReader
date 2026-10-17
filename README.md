@@ -31,14 +31,6 @@ MinSdk
 📥 下载安装
 前往 Releases 下载 APK → 允许安装未知来源 → 安装；或 adb install -r InkReader-1.0.0-debug.apk。当前为 debug 签名，提示“来源未知”属正常。
 
-🛠 从源码构建
-
-bash
-git clone https://github.com/<你的用户名>/InkReader.git && cd InkReader
-./gradlew assembleDebug       # 产物 app/build/outputs/apk/debug/app-debug.apk
-./gradlew testDebugUnitTest   # 27 个单元测试
-环境：JDK 17、Android SDK 35。
-
 🧱 技术栈
 Jetpack Compose + Material 3(Android 12+ 动态取色)、单 Activity + Navigation、Room + DataStore、OkHttp + Jsoup(仅用于用户主动输入的 URL);全部图标与启动图标为代码自绘矢量图形，无位图、无 Lottie、无第三方图标库。目录结构说明见文件内完整版。
 

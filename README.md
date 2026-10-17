@@ -1,11 +1,6 @@
 墨阅 InkReader
 一款纯本地的中文小说阅读器 —— 无账号、无广告、无追踪。TXT ↔ EPUB 双向转换，完整中文排版体验。
 
-Platform
-MinSdk
-[blocked]Built with
-[blocked]
-
 这是什么
 墨阅(InkReader) 是一个运行在 Android 上的离线小说阅读器。它不注册账号、不展示广告、不采集任何数据，联网权限只在你自己粘贴下载链接时使用。
 

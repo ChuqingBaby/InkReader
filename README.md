@@ -1,2 +1,51 @@
-# InkReader
+墨阅 InkReader
 一款纯本地的中文小说阅读器 —— 无账号、无广告、无追踪。TXT ↔ EPUB 双向转换，完整中文排版体验。
+
+Platform
+MinSdk
+[blocked]Built with
+[blocked]
+
+这是什么
+墨阅(InkReader) 是一个运行在 Android 上的离线小说阅读器。它不注册账号、不展示广告、不采集任何数据，联网权限只在你自己粘贴下载链接时使用。
+
+它同时是一个格式转换工具：TXT 与 EPUB 双向互转，MOBI 读取后一键转出，全部在你的手机本地完成，没有云端，没有上传。
+
+(此处建议插入书架/阅读器/转换页三张截图，占位注释已写在文件里)
+
+✨ 功能
+📚 导入：文件选择器多选导入 TXT/EPUB/MOBI;一键扫描本机目录批量导入；粘贴 URL 直接下载(普通网页自动抓正文转存 TXT);自动识别书名与作者，支持重命名。
+
+🔄 格式转换(核心):TXT ↔ EPUB 双向，MOBI → TXT/EPUB;编码自动探测(UTF-8/GBK/UTF-16)可手动指定；章节智能切分(「第X章/卷/回、序章、楔子…」正则可自定义)；后台转换带进度通知，失败有明确原因，支持重试/取消；转换历史可重新转换或导出。
+
+📖 从其他 App 打开：已注册为系统 txt/epub/mobi 处理者；打开策略可选每次询问(默认)/仅阅读/自动转换——选自动转换后，从微信、网盘打开 txt 会静默转格式、入库、直接进入阅读，全程零操作。
+
+🗂 书架：网格/列表双视图、占位封面(莫兰迪色+首字)、长按多选(删除/分组/重命名/一键转换)、三种排序、关键字搜索。
+
+🔬 阅读器：平移/仿真/滚动/无动画四种翻页；字号行距段距边距字体全可调；纸张/羊皮/护眼绿/夜间/纯黑五主题+跟随系统深色；亮度独立调节、音量键翻页、屏幕常亮；中央菜单：目录、进度滑块、书签、全文搜索；中文避头尾排版、两端对齐可选；进度精确到段落，重开即恢复。
+
+🔤 字体：内置思源黑体/宋体(SIL OFL 1.1 开源可商用)，支持导入本地 ttf/otf、设默认、阅读中即时切换。
+
+💾 数据：书架+进度+书签 JSON 备份/恢复；清理缓存。
+
+📥 下载安装
+前往 Releases 下载 APK → 允许安装未知来源 → 安装；或 adb install -r InkReader-1.0.0-debug.apk。当前为 debug 签名，提示“来源未知”属正常。
+
+🛠 从源码构建
+
+bash
+git clone https://github.com/<你的用户名>/InkReader.git && cd InkReader
+./gradlew assembleDebug       # 产物 app/build/outputs/apk/debug/app-debug.apk
+./gradlew testDebugUnitTest   # 27 个单元测试
+环境：JDK 17、Android SDK 35。
+
+🧱 技术栈
+Jetpack Compose + Material 3(Android 12+ 动态取色)、单 Activity + Navigation、Room + DataStore、OkHttp + Jsoup(仅用于用户主动输入的 URL);全部图标与启动图标为代码自绘矢量图形，无位图、无 Lottie、无第三方图标库。目录结构说明见文件内完整版。
+
+📄 字体与许可
+思源黑体/宋体 © Adobe & Google,SIL Open Font License 1.1(仓库内为实例化+子集化版本，保留全部常用汉字)；依赖库 Apache-2.0 / MIT;项目代码建议 MIT(占位，按你的意愿替换)。
+
+❓ FAQ(节选)
+乱码→设置里手动指定 GBK;扫不到目录→Android 13 系统限制，请选目录授权；转换失败→「转换」页有具体原因。
+
+墨阅 —— 把书放回你自己的设备里。
